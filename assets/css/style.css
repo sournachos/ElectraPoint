@@ -1,0 +1,26 @@
+/* Sets header color */
+.bg-gray {
+    background-color: #414141;
+}
+
+.logo {
+    color: #ca3e47
+}
+
+.logo-text {
+    font-size: 25px;
+}
+
+body {
+    background-color: #313131
+}
+
+#videoBG{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index:-1;
+    width: 100%;
+    height: 700px;
+    margin: 30px;
+}
