@@ -7,10 +7,10 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- <link href="/assets/css/style.css" rel="stylesheet"> -->
     <script src="./assets/js/script.js" defer></script>
-    <title>Group #2 Project 1 </title>
+    <title>ECar ER</title>
 </head>
 <!-- This example requires Tailwind CSS v2.0+ -->
-<body>
+<body class="h-screen">
 <div>
     <nav class="bg-gray-600">
         <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,11 +48,12 @@
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             <!-- Replace with your content -->
             <div class="px-4 py-6 sm:px-0 ">
-                <div class="border-4 border-dashed border-gray-200 rounded-lg h-96 relative">
-                    <form class="citySearch absolute ml-48 w-2/4">
-                    <input type="text" class="userInput border-2 rounded border-black"/>
-                    <button class="btn bg-gray-400 rounded px-1 " >Search</button>
-                    </form>
+                <div class="border-4 border-dashed border-gray-200 rounded-lg h-screen relative">
+                    <!-- FUNCTIONAL MAP -->
+                    <div id="map-container" style="position: relative; width: 100%; height: 100%;">
+                        <iframe id="map-app" src="https://map.openchargemap.io" onload="mapLoaded();" frameborder="0" allow="geolocation" style="width:100%;height:100%"></iframe>
+                    </div>
+            
                 </div>
             </div>
             <!-- /End replace -->
