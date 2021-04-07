@@ -1,4 +1,3 @@
-// let city = document.querySelector('.userInp').value
 let joke = document.querySelector('.joke')
 
 fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
