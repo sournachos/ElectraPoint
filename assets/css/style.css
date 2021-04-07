@@ -1,10 +1,18 @@
 /* Sets header color */
 .bg-gray {
     background-color: #414141;
+    color: #414141;
+}
+.bg-drkgray{
+    background-color: #313131;
 }
 
 .logo {
     color: #ca3e47
+}
+
+.logo-bg{
+    background-color: #ca3e47;
 }
 
 .logo-text {
