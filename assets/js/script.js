@@ -20,8 +20,7 @@ btn.onclick = function() {
                 modalContent.innerHTML = joke;
                 console.log(joke); 
             }else if(data.type === 'twopart'){
-                var joke = (data.setup, '\n', data.delivery)
-                modalContent.innerHTML = joke;
+                modalContent.innerHTML = data.setup + '<br>' + data.delivery;
                 console.log(data.setup, '\n', data.delivery)
             }
         })
