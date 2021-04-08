@@ -1,16 +1,10 @@
-//.catch(error => console.log('Whoops wrong turn!'))
-
-// Get the modal
+// Get the modal, its content <div>, the button to open it, and the span to close it.
 var modal = document.getElementById("myModal");
 var modalContent = document.querySelector(".modalp");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, modal opens, fetches JokeAPI, and displays it in the modal on screen.
 btn.onclick = function() {
     fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
     .then(res =>{return res.json()})
@@ -20,22 +14,19 @@ btn.onclick = function() {
                 modalContent.innerHTML = joke;
                 console.log(joke); 
             }else if(data.type === 'twopart'){
-                modalContent.innerHTML = data.setup + '<br>' + data.delivery;
-                console.log(data.setup, '\n', data.delivery)
+                modalContent.innerHTML = data.setup + '<br><br>' + data.delivery;
+                console.log(data.setup, '<br><br>',data.delivery)
             }
         })
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+// When the user clicks on <span> (x), or outside the modal, the modal closes.
+  span.onclick = function() {
     modal.style.display = "none";
   }
-}
-
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }

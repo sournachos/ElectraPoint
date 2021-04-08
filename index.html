@@ -9,8 +9,8 @@
     <script src="./assets/js/script.js" defer></script>
     <title>ElectraPoint Landing Page</title>
 </head>
-<!-- This example requires Tailwind CSS v2.0+ -->
 
+<!-- This example requires Tailwind CSS v2.0+ -->
 <body>
     <nav class="flex bg-gray">
         <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,24 +20,23 @@
                         <img class="h-10 w-" src="./assets/images/Ecar-ER-Logo.png" alt="Logo"></img>
                     </div>
                     <div>
-                        <a href="#" class="logo-text logo hover:text-red-400 text-gray-300  rounded-md text-sm">ElectraPoint</a>
+                        <a href="/index.html" class="logo-text logo hover:text-red-400 text-gray-300  rounded-md text-sm">ElectraPoint</a>
                     </div>
                     <div class="block">
                         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 md:ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="./assets/HTML/map.html"
-                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md ">Find
+                                class="text-white hover:bg-gray-600 hover:text-red-500 px-3 py-2 rounded-md text-md ">Find
                                 Nearest Charging Station</a>
-                            <a id="myBtn" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md joke">Dont
-                                Have an EV?</a>
+                            <a id="myBtn" class="text-white hover:bg-gray-600 hover:text-red-500 px-3 py-2 rounded-md text-md joke">Don't
+                                Have an ECar?</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
-    
+ 
 <!-- Hero section -->
     <div class="relative bg-drkgray overflow-hidden">
         <div class="max-w-7xl mx-auto">
@@ -60,29 +59,25 @@
               </nav>
 
                 <!-- The Modal -->
-              <div id="myModal" class="modal">
+              <div id="myModal" class="hidden pt-32 fixed w-full h-full z-1 left-0 top-0 overflow-auto" style="background-color: rgba(0,0,0,0.5);">
 
                 <!-- Modal content -->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <span class="close object-top">&times;</span>
-                    <h2>Since you don't have an EV, here's a joke:</h2>
+                <div class="relative m-auto px-0 text-white w-4/5" style="background-color: #313131;border-radius: 5px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);-webkit-animation-name: animatetop;-webkit-animation-duration: 0.9s;animation-name: animatetop;animation-duration: 0.9s ">
+                  <div class="rounded p-4 text-lg font-bold" style="background-color: #414141;color: #ca3e47;">
+                    <span class="close relative float-right text-2xl ml-2 hover:text-black cursor-pointer">(&times;)</span>
+                    <h2>Since you don't have an ECar, here's a joke:</h2>
                   </div>
-                  <div class="modal-body">
-                    <p class="modalp">Joke goes here</p>
+                  <div class="m-7">
+                    <p class="modalp bg-rounded-lg text-center"></p>
                   </div>
-                  <div class="modal-footer">
-                    <h3>Click anywhere to dismiss joke</h3>
+                  <div class="rounded p-4 text-lg font-bold" style="background-color: #414141;color: #ca3e47;">
+                    <h3>Click the (x), or outside the box to dismiss joke</h3>
                   </div>
                 </div>
-
               </div>
-
-            </div>
-      
-            <!--
-              Mobile menu, show/hide based on menu open state.
-            -->
+            </div>      
+            
+            <!--  Mobile menu, show/hide based on menu open state.-->
             <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
               <div class="rounded-lg shadow-md bg-gray ring-1 ring-opacity-0 overflow-hidden opacity-0">
                 <div class="px-5 pt-4 flex items-center justify-between">
@@ -112,7 +107,7 @@
                   </div>
                   <div class="mt-3 sm:mt-0 sm:ml-3">
                     <a href="https://www.tesla.com/inventory/new/ms" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-gray-300 hover:bg-white md:py-4 md:text-lg md:px-10">
-                      Purchase a 4-Wheeled Buddy!
+                      Purchase a 4-Wheel Buddy!
                     </a>
                   </div>
                 </div>
@@ -126,7 +121,5 @@
         </video>
         </div>
       </div>
-
 </body>
-
 </html>
