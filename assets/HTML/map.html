@@ -7,56 +7,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    
     <script src="../js/script.js" defer></script>
     <title>ElectraPoint Map Page</title>
 </head>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <body class="h-screen">
 <div>
-    <nav class="flex bg-gray">
-        <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <a href="../../index.html" id="logo-home"><img class="h-10 image_on animate__animated animate__fadeIn" src="../images/Ecar-ER-Logo.png" alt="Logo"></img><img class="h-10 image_off animate__animated animate__flip  " src="../images/Ecar-ER-Logo-On.png" alt="Logo"></img></a>
-                    </div>
-                    <div>
-                        <a href="#" class="logo-text logo hover:text-red-400 text-gray-300  rounded-md text-sm">ElectraPoint</a>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-
-                            <a href="../../index.html"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-
-                        </div>
-                    </div>
-                </div>
+  <nav class="flex bg-gray">
+    <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="../../index.html" id="logo-home"><img class="h-10 image_on animate__animated animate__fadeIn" src="../images/Ecar-ER-Logo.png" alt="Logo"></img><img class="h-10 image_off  animate__animated animate__flip  " src="../images/Ecar-ER-Logo-On.png" alt="Logo"></img></a>
+          </div>
+          <div>
+            <a href="../../index.html" class="text-3xl logo hover:text-red-400 text-gray-300  rounded-md text-sm">ElectraPoint</a>
+          </div>
+          <div class="block">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 md:ml-10 flex items-baseline space-x-4">
+              <a v id="myBtn" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md joke">Dont
+                Have an EV?</a>
             </div>
+          </div>
         </div>
-
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
-                <a href="../../index.html"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            </div>
-
-            <div class="-mr-2 flex items-center md:hidden">
-                <button type="button" class="bg-gray-600 rounded-md p-2 inline-flex items-center justify-center text-red-600 hover:text-red-800 hover:bg-gray-500 focus:outline-none" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                  </svg>
-                </button>
-              </div>
-        </div>
-    </nav>
-
-    
+      </div>
+    </div>
+  </nav>
 
     <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -76,19 +52,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
