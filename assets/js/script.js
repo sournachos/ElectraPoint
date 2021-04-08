@@ -1,20 +1,8 @@
-let joke = document.querySelector('.joke')
-
-fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
-.then(res =>{return res.json()})
-.then(data => {
-        joke.addEventListener('click', function(){
-            if(data.type === 'single'){
-           console.log(data.joke) 
-        }else if(data.type === 'twopart'){
-            console.log(data.setup, '\n', data.delivery)
-        }
-    })
-})
-.catch(error => console.log('Whoops wrong turn!'))
+//.catch(error => console.log('Whoops wrong turn!'))
 
 // Get the modal
 var modal = document.getElementById("myModal");
+var modalContent = document.getElementsByClassName("modalp");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
@@ -24,6 +12,19 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+    fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
+    .then(res =>{return res.json()})
+    .then(data => {
+            if(data.type === 'single'){
+                var joke = (data.joke);
+                modalContent.textContent = joke;
+                console.log(joke); 
+            }else if(data.type === 'twopart'){
+                var joke = (data.setup, '\n', data.delivery)
+                modalContent.textContent = joke;
+                console.log(data.setup, '\n', data.delivery)
+            }
+        })
   modal.style.display = "block";
 }
 
@@ -38,3 +39,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
