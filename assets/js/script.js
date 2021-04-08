@@ -2,7 +2,7 @@
 
 // Get the modal
 var modal = document.getElementById("myModal");
-var modalContent = document.getElementsByClassName("modalp");
+var modalContent = document.querySelector(".modalp");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
@@ -17,11 +17,11 @@ btn.onclick = function() {
     .then(data => {
             if(data.type === 'single'){
                 var joke = (data.joke);
-                modalContent.textContent = joke;
+                modalContent.innerHTML = joke;
                 console.log(joke); 
             }else if(data.type === 'twopart'){
                 var joke = (data.setup, '\n', data.delivery)
-                modalContent.textContent = joke;
+                modalContent.innerHTML = joke;
                 console.log(data.setup, '\n', data.delivery)
             }
         })
