@@ -36,3 +36,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
+
+/* Allows logo to transition to its lit up effect when hovering */
+.image_off, #logo-home:hover .image_on{
+  display:none
+}
+.image_on, #logo-home:hover .image_off{
+  display:block
+}
