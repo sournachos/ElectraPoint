@@ -1,4 +1,4 @@
-# GroupProject1 (ElectraPoint)
+# ElectraPoint
 Access the live deployed GitHub page with the link bellow:
 - https://sournachos.github.io/ElectraPoint/
 
