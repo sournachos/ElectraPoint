@@ -5,7 +5,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, modal opens, fetches JokeAPI, and displays it in the modal on screen.
-btn.onclick = function() {
+btn.onclick = function jokey() {
     fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
     .then(res =>{return res.json()})
     .then(data => {

@@ -44,3 +44,98 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .image_on, #logo-home:hover .image_off{
   display:block
 }
+
+
+
+
+  
+  #nav-container {
+    position: fixed;
+    z-index: 100;
+    /* height: 50vh; */
+    /* width: 25%; */
+    pointer-events: none;
+  }
+  
+  .button {
+    outline: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 70px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  .icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #aaa;
+    transition: .8s;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 5px;
+  }
+  
+  #nav-container:focus-within .button {
+    pointer-events: none;
+  }
+  #nav-container:focus-within .icon-bar:nth-of-type(1) {
+    transform: translate3d(0,4px,0) rotate(45deg);
+  }
+  #nav-container:focus-within .icon-bar:nth-of-type(2) {
+    transform: translate3d(0,-4px,0) rotate(-45deg);
+  }
+  
+  #nav-content {
+    margin-top: 64px;
+    padding: 20px;
+    width: 90%;
+    max-width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55%;
+    /* height: calc(100% - 90px); Kept it because found it to be a cool little variant */
+    background: #313131;
+    pointer-events: auto;
+    transform: translateX(-100%);
+    transition: transform 1s;
+    will-change: transform;
+    contain: paint;
+    outline: none;
+  }
+  
+  #nav-content ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  
+  #nav-content li a {
+    /* padding: 10px 5px; */
+    display: block;
+    text-transform: uppercase;
+    color: #aaa;
+    text-decoration: none;
+    transition: color .9s;
+  }
+  
+  #nav-content li a:hover {
+    color: #ca3e47;
+  }
+  
+  #nav-container:focus-within #nav-content {
+    transform: none;
+  }
