@@ -33,7 +33,7 @@ btn.onclick = function() {
   }
 }
 
-btn1.addEventListener('touchstart', function jokey                                                                                                   () {
+btn1.addEventListener('touchstart', function jokey() {
   fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
   .then(res =>{return res.json()})
   .then(data => {
