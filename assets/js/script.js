@@ -3,7 +3,6 @@ var modal = document.getElementById("myModal");
 var modalContent = document.querySelector(".modalp");
 var span = document.getElementsByClassName("close")[0];
 var menu = document.getElementById("nav-content");
-var but = document.getElementsByClassName("button");
 
 // When the user clicks the button, modal opens, fetches JokeAPI, and displays it in the modal on screen.
 function jokey() {
